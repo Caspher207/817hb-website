@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-cream: #faf6ef;
+  --color-sand: #f3ebdf;
+  --color-linen: #e5d9c4;
+  --color-espresso: #2a241e;
+  --color-mocha: #3f352a;
+  --color-gold: #b08d57;
+  --color-gold-deep: #74572b;
+  --color-gold-soft: #e3d2b4;
+  --color-pine: #3e4e43;
+  --color-pine-deep: #2c382e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream font-sans text-espresso antialiased;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+::selection {
+  background: var(--color-gold-soft);
+  color: var(--color-espresso);
+}
+
+.eyebrow {
+  @apply font-sans text-[15px] font-semibold uppercase tracking-[0.16em] text-gold-deep;
+}
+
+.container-site {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+.card {
+  @apply rounded-3xl bg-white/85 shadow-[0_2px_24px_-8px_rgba(42,36,30,0.14)] ring-1 ring-linen;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-espresso px-8 py-4 text-lg font-medium tracking-wide text-cream transition hover:bg-pine-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-espresso;
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-gold-deep px-8 py-4 text-lg font-medium tracking-wide text-cream transition hover:bg-[#5e4622] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-deep;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-espresso/60 px-8 py-4 text-lg font-medium tracking-wide text-espresso transition hover:border-espresso hover:bg-espresso hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-espresso;
+}
+
+.btn-whatsapp {
+  @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-pine px-8 py-4 text-lg font-medium tracking-wide text-cream transition hover:bg-pine-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pine;
+}
+
+.field {
+  @apply w-full rounded-xl border-2 border-[#937c54] bg-white px-4 py-3.5 text-lg text-espresso placeholder:text-[#6b5a45] transition focus:border-gold-deep focus:outline-none focus:ring-2 focus:ring-gold/30;
+}

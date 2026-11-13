@@ -1,0 +1,27 @@
+{
+  "name": "act-in-faith-817hb-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/gallery.mjs on",
+    "dev": "vite",
+    "prebuild": "node scripts/gallery.mjs off",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gallery:on": "node scripts/gallery.mjs on",
+    "gallery:off": "node scripts/gallery.mjs off",
+    "postbuild": "node scripts/gallery.mjs on"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.3.0"
+  }
+}

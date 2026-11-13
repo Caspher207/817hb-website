@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# Identifiable client photos — never commit or ship until consent is confirmed
+client-gallery/
+public/images/results-facial-*.webp
+.env.development
