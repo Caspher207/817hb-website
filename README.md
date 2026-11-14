@@ -38,12 +38,9 @@ npm run build      # outputs to website/dist
 npm run preview    # serve the production build locally
 ```
 
-`npm run build` automatically removes the before/after photos from
-`public/images` (`prebuild` script) so they are never bundled into `dist/`,
-then restores them afterwards (`postbuild` script) so the local dev preview
-keeps working. The results-gallery section is not rendered in production (the
-`VITE_SHOW_RESULTS` flag is only set in `.env.development`). Both
-`client-gallery/` and the public copies are git-ignored.
+The testimonials gallery is enabled in production via
+`VITE_SHOW_RESULTS=true` in `.env.production` (committed). To hide the
+section without removing the photos, remove that flag and rebuild.
 
 The build is a static SPA. Any static host (Netlify, Vercel, Cloudflare Pages,
 GitHub Pages, or an S3/CDN) can serve `dist/`. Because the site uses
@@ -79,16 +76,14 @@ wire the `onSubmit` handler in `src/pages/Contact.jsx` to that endpoint.
   transparent, tight-cropped.
 - `diamond-peel-program.webp`, `diamond-peel-sachet.webp`,
   `health-begins-cells.webp` — embedded assets from the client Home document.
-- `client-gallery/results-facial-*.webp` — the eight supplied before/after
-  photographs (`Before&After*.jpeg`, in order), cropped to remove Chinese
-  promotional text overlays and presentation-slide surrounds, resized and
-  converted to WebP. Skin appearance, lighting and before/after order are
-  unchanged. **Originals are preserved untouched in the project root.**
-  These show identifiable individuals: they are served in local preview only
-  and are excluded from the production build until publication consent is
-  confirmed. To restore the gallery in a build after consent is granted, set
-  `VITE_SHOW_RESULTS=true` in `.env.production` and run `npm run gallery:on`
-  before building.
+- `public/images/results-facial-*.webp` — the eight supplied before/after
+  photographs (`Before&After*` files, in order; slot 8 uses `Before&After8.png`),
+  cropped to remove Chinese promotional text overlays and presentation-slide
+  surrounds, square-padded on a blurred self-backdrop so both panels fit the
+  cards, converted to WebP. Skin appearance, lighting and before/after order
+  are unchanged. **Originals are preserved untouched in the project root.**
+  These show identifiable individuals and are published in production under
+  `VITE_SHOW_RESULTS=true` (`.env.production`).
 
 ### Licensed stock (Unsplash License — free for commercial use, no attribution required)
 
@@ -113,8 +108,6 @@ error messages in `red-800`.
 
 - [ ] Confirm production domain and update `public/sitemap.xml` and
       `public/robots.txt` (currently provisional `https://www.817hb.sg`).
-- [ ] Confirm publication consent for the before/after photographs showing
-      identifiable individuals, then enable the gallery as described above.
 - [ ] Confirm whether the "not available Sat, Sun & PH" restriction in the
       Home document should be published (currently omitted; site says only
       "strictly by appointment").

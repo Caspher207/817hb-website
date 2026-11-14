@@ -95,7 +95,7 @@ function ResultsSection() {
   return (
     <section className="container-site py-16 sm:py-20">
       <div className="max-w-2xl">
-        <p className="eyebrow">Client Photographs</p>
+        <p className="eyebrow">Testimonials</p>
         <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">Results, as supplied</h2>
         <p className="mt-4 text-xl leading-[1.7] text-mocha">
           The photographs below were supplied by the client and are shown without retouching.

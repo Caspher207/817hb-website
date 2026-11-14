@@ -4,14 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/gallery.mjs on",
     "dev": "vite",
-    "prebuild": "node scripts/gallery.mjs off",
     "build": "vite build",
-    "preview": "vite preview",
-    "gallery:on": "node scripts/gallery.mjs on",
-    "gallery:off": "node scripts/gallery.mjs off",
-    "postbuild": "node scripts/gallery.mjs on"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
