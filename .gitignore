@@ -2,3 +2,6 @@ node_modules/
 dist/
 # Staging copies of gallery photos — originals live in the project root
 client-gallery/
+
+# Pending client consent — keep out of the repo & production build
+public/images/comparison-eyelids.webp

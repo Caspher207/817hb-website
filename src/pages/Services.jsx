@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import PageHero from '../components/PageHero'
 import WhatsAppButton from '../components/WhatsAppButton'
-import { RESET_PROGRAMMES, OFFERINGS, RESULTS_IMAGES } from '../data/site'
+import { RESET_PROGRAMMES, OFFERINGS, RESULTS_IMAGES, FACIAL_COMPARISON } from '../data/site'
 
 const SHOW_RESULTS = import.meta.env.VITE_SHOW_RESULTS === 'true'
 
@@ -126,6 +126,54 @@ function ResultsSection() {
   )
 }
 
+function ComparisonSection() {
+  const c = FACIAL_COMPARISON
+  return (
+    <section className="bg-sand/60 py-16 sm:py-20">
+      <div className="container-site">
+        <div className="max-w-2xl">
+          <p className="eyebrow">Testimonials</p>
+          <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
+            Before &amp; After Facial Comparison
+          </h2>
+          <p className="mt-4 text-xl leading-[1.7] text-mocha">{c.intro}</p>
+        </div>
+
+        <figure className="card mt-10 overflow-hidden">
+          <img src={c.src} alt={c.alt} className="w-full object-cover" />
+          <figcaption className="px-5 py-3 text-base font-medium text-mocha">
+            {c.caption}
+          </figcaption>
+        </figure>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {c.categories.map((cat) => (
+            <article key={cat.title} className="card p-6 sm:p-7">
+              <h3 className="font-serif text-xl font-semibold sm:text-2xl">{cat.title}</h3>
+              <dl className="mt-4 space-y-3">
+                <div>
+                  <dt className="text-sm font-bold uppercase tracking-widest text-gold-deep">
+                    Before
+                  </dt>
+                  <dd className="mt-1 text-lg leading-[1.6] text-mocha">{cat.before}</dd>
+                </div>
+                <div>
+                  <dt className="text-sm font-bold uppercase tracking-widest text-pine">
+                    After
+                  </dt>
+                  <dd className="mt-1 text-lg leading-[1.6] text-mocha">{cat.after}</dd>
+                </div>
+              </dl>
+            </article>
+          ))}
+        </div>
+
+        <p className="mt-8 max-w-3xl text-base leading-relaxed text-mocha">{c.disclaimer}</p>
+      </div>
+    </section>
+  )
+}
+
 export default function Services() {
   return (
     <>
@@ -141,6 +189,7 @@ export default function Services() {
       <ResetSection />
       <OfferingsSection />
       {SHOW_RESULTS && <ResultsSection />}
+      {SHOW_RESULTS && <ComparisonSection />}
 
       <section className="container-site pb-4">
         <div className="card mx-auto flex max-w-3xl flex-col items-center gap-5 p-10 text-center">

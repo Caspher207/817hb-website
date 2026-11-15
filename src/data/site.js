@@ -150,3 +150,38 @@ export const NAV_LINKS = [
   { to: '/events', label: 'Events & Workshops' },
   { to: '/contact', label: 'Contact' },
 ]
+
+// Featured before/after comparison supplied by the client (Ezekiel), paired
+// with the client's written explanation. The client's unverified interpretation
+// of the cause (see project-root review notes) is deliberately not published.
+export const FACIAL_COMPARISON = {
+  src: '/images/comparison-eyelids.webp',
+  alt: "Before and after close-up comparison of a man's eye and mid-face area, supplied by the client",
+  caption: 'Before & after — client-supplied photograph',
+  intro:
+    'There are distinct visible differences between the left (before) and right (after) photographs, particularly around the lower eyelids, mid-face appearance and skin surface.',
+  categories: [
+    {
+      title: 'Lower Eyelids & Tear Troughs',
+      before: 'Prominent under-eye bags with deeper shadow lines underneath.',
+      after: 'The lower eyelid area appears smoother, with less visible puffiness and shadowing.',
+    },
+    {
+      title: 'Skin Texture & Sheen',
+      before: 'A matte appearance with visible fine lines and deeper facial shadows.',
+      after: 'A glossier, more reflective skin surface with a smoother appearance.',
+    },
+    {
+      title: 'Mid-Face & Cheek Volume',
+      before: 'Some visible sagging and hollowing around the upper cheek area.',
+      after: 'The mid-face appears fuller and smoother.',
+    },
+    {
+      title: 'Hyperpigmentation',
+      before: 'Visible spots and freckles on the cheeks.',
+      after: 'Similar pigmentation spots remain visible.',
+    },
+  ],
+  disclaimer:
+    'These descriptions reflect visible differences in the supplied photographs only. The treatment performed and the cause of the changes have not been independently verified. Appearance may be affected by lighting, positioning and other factors. Individual results may vary.',
+}
