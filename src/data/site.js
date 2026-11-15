@@ -182,6 +182,8 @@ export const FACIAL_COMPARISON = {
       after: 'The spots remain identical in placement, indicating pigmentation was not removed.',
     },
   ],
+  reviewConclusion:
+    'These types of specific changes—where under-eye puffiness is completely erased while the skin becomes temporarily shiny and reflective—are highly characteristic of dermal filler injections (tear trough rejuvenation) or an immediate post-operative recovery phase.',
   disclaimer:
     'These descriptions reflect visible differences in the supplied photographs only. The treatment performed and the cause of the changes have not been independently verified. Appearance may be affected by lighting, positioning and other factors. Individual results may vary.',
 }
