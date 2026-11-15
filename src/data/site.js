@@ -159,27 +159,27 @@ export const FACIAL_COMPARISON = {
   alt: "Before and after close-up comparison of a man's eye and mid-face area, supplied by the client",
   caption: 'Before and after facial appearance comparison.',
   intro:
-    'There are distinct visible differences between the left (before) and right (after) photographs, particularly around the lower eyelids, mid-face appearance and skin surface.',
+    'There are distinct structural and textural differences between the left (before) and right (after) photographs. The most notable changes occur around the lower eyelids, mid-face volume, and overall skin hydration. A direct comparison of the key facial regions reveals the following differences:',
   categories: [
     {
       title: 'Lower Eyelids & Tear Troughs',
-      before: 'Prominent under-eye bags with deeper shadow lines underneath.',
-      after: 'The lower eyelid area appears smoother, with less visible puffiness and shadowing.',
+      before: 'Prominent fat bulging (bags) with deep shadow lines underneath.',
+      after: 'Completely smooth, flat transition from the lower eyelid to the cheek.',
     },
     {
       title: 'Skin Texture & Sheen',
-      before: 'A matte appearance with visible fine lines and deeper facial shadows.',
-      after: 'A glossier, more reflective skin surface with a smoother appearance.',
+      before: 'Matte finish with visible fine lines and deeper structural shadows.',
+      after: 'High sheen, glossy appearance, and a noticeably tighter, highly hydrated surface.',
     },
     {
       title: 'Mid-Face & Cheek Volume',
-      before: 'Some visible sagging and hollowing around the upper cheek area.',
-      after: 'The mid-face appears fuller and smoother.',
+      before: 'Mild sagging and hollowing in the upper cheek area.',
+      after: 'Plumper, firmer appearance with a subtle lift in the mid-face region.',
     },
     {
       title: 'Hyperpigmentation',
-      before: 'Visible spots and freckles on the cheeks.',
-      after: 'Similar pigmentation spots remain visible.',
+      before: 'Visible sunspots and freckles on the cheeks.',
+      after: 'The spots remain identical in placement, indicating pigmentation was not removed.',
     },
   ],
   disclaimer:
