@@ -180,15 +180,11 @@ function ComparisonSection() {
         </div>
 
         {REVIEW_MODE && (
-          <aside className="mt-8 max-w-3xl rounded-2xl border-2 border-dashed border-gold-deep/60 bg-linen/60 p-6 sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-widest text-gold-deep">
-              Original Client-Supplied Conclusion — Pending Verification
-            </p>
-            <p className="mt-3 text-lg leading-[1.7] text-espresso">{c.reviewConclusion}</p>
-            <p className="mt-3 text-base leading-relaxed text-mocha">
-              Shown for client review only — not an independent diagnosis and not published
-              on the production website.
-            </p>
+          <aside className="card mt-8 max-w-3xl p-6 sm:p-8">
+            <h3 className="font-serif text-xl font-semibold sm:text-2xl">
+              Facial Comparison Summary
+            </h3>
+            <p className="mt-3 text-lg leading-[1.7] text-mocha">{c.reviewConclusion}</p>
           </aside>
         )}
 
