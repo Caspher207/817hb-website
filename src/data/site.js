@@ -93,7 +93,9 @@ export const OFFERINGS = [
 
 // Identifiable before/after photographs supplied by the client.
 // Source mapping:
-//   results-facial-1..7  <-  Before&After.jpeg .. Before&After6.jpeg (in order)
+//   results-facial-1,3,4,5,6,7  <-  Before&After.jpeg, Before&After2..6.jpeg
+//   (slot 2 removed: that full-face before/after now appears only in the
+//   Before & After Facial Comparison section as the supplied eye-region crop)
 //   results-facial-8     <-  Before&After8.png (supersedes Before&After7.jpeg;
 //                            caption strip cropped, square-padded on a blurred
 //                            self-backdrop so both profiles fit the card)
@@ -104,11 +106,6 @@ export const RESULTS_IMAGES = [
   {
     src: '/images/results-facial-1.webp',
     alt: 'Before and after facial photographs supplied by the client',
-    caption: 'Before & after — client-supplied photographs',
-  },
-  {
-    src: '/images/results-facial-2.webp',
-    alt: 'Before and after photographs of a male client\u2019s face, supplied by the client',
     caption: 'Before & after — client-supplied photographs',
   },
   {
@@ -151,13 +148,16 @@ export const NAV_LINKS = [
   { to: '/contact', label: 'Contact' },
 ]
 
-// Featured before/after comparison supplied by the client (Ezekiel), paired
+// Featured before/after comparison supplied by the client (Ezekiel)
+// (source: Before&After1-cut.jpeg — an eye-region crop of Before&After1.jpeg,
+// the same before/after shown full-face in results-facial-2, removed from the
+// gallery grid to avoid duplication), paired
 // with the client's written explanation. The client's unverified interpretation
 // of the cause (see project-root review notes) is deliberately not published.
 export const FACIAL_COMPARISON = {
   src: '/images/comparison-eyelids.webp',
   alt: "Before and after close-up comparison of a man's eye and mid-face area, supplied by the client",
-  caption: 'Before & after — client-supplied photograph',
+  caption: 'Before and after facial appearance comparison.',
   intro:
     'There are distinct visible differences between the left (before) and right (after) photographs, particularly around the lower eyelids, mid-face appearance and skin surface.',
   categories: [

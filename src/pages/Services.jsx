@@ -132,7 +132,7 @@ function ComparisonSection() {
     <section className="bg-sand/60 py-16 sm:py-20">
       <div className="container-site">
         <div className="max-w-2xl">
-          <p className="eyebrow">Testimonials</p>
+          <p className="eyebrow">Visual Comparison</p>
           <h2 className="mt-3 font-serif text-3xl font-semibold sm:text-4xl">
             Before &amp; After Facial Comparison
           </h2>
@@ -140,7 +140,15 @@ function ComparisonSection() {
         </div>
 
         <figure className="card mt-10 overflow-hidden">
-          <img src={c.src} alt={c.alt} className="w-full object-cover" />
+          <div className="relative">
+            <img src={c.src} alt={c.alt} className="w-full object-cover" />
+            <span className="absolute left-3 top-3 rounded-full bg-cream/95 px-4 py-1.5 text-sm font-bold uppercase tracking-widest text-espresso shadow-sm">
+              Before
+            </span>
+            <span className="absolute right-3 top-3 rounded-full bg-cream/95 px-4 py-1.5 text-sm font-bold uppercase tracking-widest text-espresso shadow-sm">
+              After
+            </span>
+          </div>
           <figcaption className="px-5 py-3 text-base font-medium text-mocha">
             {c.caption}
           </figcaption>
@@ -168,7 +176,7 @@ function ComparisonSection() {
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-base leading-relaxed text-mocha">{c.disclaimer}</p>
+        <p className="mt-8 max-w-3xl text-lg leading-[1.7] text-mocha">{c.disclaimer}</p>
       </div>
     </section>
   )
