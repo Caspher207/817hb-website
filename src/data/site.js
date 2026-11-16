@@ -93,15 +93,21 @@ export const OFFERINGS = [
 
 // Identifiable before/after photographs supplied by the client.
 // Source mapping:
-//   results-facial-1,3,4,5,6,7  <-  Before&After.jpeg, Before&After2..6.jpeg
+//   results-facial-1     <-  Before&After-cut.jpeg  (client's own approved crop)
+//   results-facial-3,4,5,6,7  <-  Before&After2..6.jpeg (in order;
+//                            slot 4 now uses Before&After3-cut.jpeg,
+//                            the client's own approved crop)
 //   (slot 2 removed: that full-face before/after now appears only in the
 //   Before & After Facial Comparison section as the supplied eye-region crop)
-//   results-facial-8     <-  Before&After8.png (supersedes Before&After7.jpeg;
-//                            caption strip cropped, square-padded on a blurred
-//                            self-backdrop so both profiles fit the card)
+//   results-facial-8     <-  Before&After8.png (earring profile; different woman
+//                            from results-facial-9 despite the same base number;
+//                            caption strip cropped, square-padded so both
+//                            profiles fit the card)
+//   results-facial-9     <-  Before&After8.jpeg (client-approved side-angle
+//                            comparison; separate person from the .png photo)
+// Cards use object-contain — approved crops are shown whole, never clipped.
 // Crops removed text overlays and slide surrounds only; before/after order
-// and skin appearance are unchanged. Shown in local preview only until
-// publication consent is confirmed (see scripts/gallery.mjs).
+// and skin appearance are unchanged.
 export const RESULTS_IMAGES = [
   {
     src: '/images/results-facial-1.webp',
@@ -137,6 +143,11 @@ export const RESULTS_IMAGES = [
     src: '/images/results-facial-8.webp',
     alt: 'Before and after profile photographs supplied by the client',
     caption: 'Before & after — profile view',
+  },
+  {
+    src: '/images/results-facial-9.webp',
+    alt: 'Before and after side-angle facial photographs supplied by the client',
+    caption: 'Before & after — side-angle view',
   },
 ]
 

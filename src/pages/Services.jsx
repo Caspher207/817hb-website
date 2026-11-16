@@ -112,7 +112,7 @@ function ResultsSection() {
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="aspect-square w-full object-cover"
+              className="aspect-square w-full bg-white object-contain"
             />
             <figcaption className="px-4 py-3 text-base font-medium text-mocha">
               {img.caption}
