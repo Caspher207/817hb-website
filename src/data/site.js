@@ -94,15 +94,13 @@ export const OFFERINGS = [
 // Identifiable before/after photographs supplied by the client.
 // Source mapping:
 //   results-facial-1     <-  Before&After-cut.jpeg  (client's own approved crop)
-//   results-facial-3,4,5,6,7  <-  Before&After2..6.jpeg (in order;
+//   results-facial-3,4,5,7  <-  Before&After2,3,4,6.jpeg (in order;
 //                            slot 4 now uses Before&After3-cut.jpeg,
 //                            the client's own approved crop)
 //   (slot 2 removed: that full-face before/after now appears only in the
 //   Before & After Facial Comparison section as the supplied eye-region crop)
-//   results-facial-8     <-  Before&After8.png (earring profile; different woman
-//                            from results-facial-9 despite the same base number;
-//                            caption strip cropped, square-padded so both
-//                            profiles fit the card)
+//   (slots 6 & 8 removed at client's request: Before&After5.jpeg profile
+//   and Before&After8.png earring profile are withdrawn from the site)
 //   results-facial-9     <-  Before&After8.jpeg (client-approved side-angle
 //                            comparison; separate person from the .png photo)
 // Cards use object-contain — approved crops are shown whole, never clipped.
@@ -130,19 +128,9 @@ export const RESULTS_IMAGES = [
     caption: 'Before & after — cheek area',
   },
   {
-    src: '/images/results-facial-6.webp',
-    alt: 'Before and after profile photographs supplied by the client',
-    caption: 'Before & after — profile view',
-  },
-  {
     src: '/images/results-facial-7.webp',
     alt: 'Before and after close-up photographs of the eye area, supplied by the client',
     caption: 'Before & after — eye area',
-  },
-  {
-    src: '/images/results-facial-8.webp',
-    alt: 'Before and after profile photographs supplied by the client',
-    caption: 'Before & after — profile view',
   },
   {
     src: '/images/results-facial-9.webp',
