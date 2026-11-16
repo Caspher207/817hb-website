@@ -105,7 +105,7 @@ function ResultsSection() {
           Individual results vary depending on skin condition, routine and consistency.
         </p>
       </div>
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {RESULTS_IMAGES.map((img) => (
           <figure key={img.src} className="card overflow-hidden">
             <img
